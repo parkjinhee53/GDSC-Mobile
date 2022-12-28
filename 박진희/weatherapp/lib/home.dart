@@ -44,8 +44,6 @@ class _HomePageState extends State<HomePage> {
     String time = "오후 2:00";
     String weather = "맑음";
     Size size = MediaQuery.of(context).size;
-    //var brightness = MediaQuery.of(context).platformBrightness;
-    //bool isDarkMode = brightness == Brightness.dark;
     return Scaffold(
       body: Center(
         child: Container(
@@ -54,8 +52,7 @@ class _HomePageState extends State<HomePage> {
           decoration: BoxDecoration(
             color: weather == "맑음"
                 ? Color.fromARGB(255, 88, 197, 248)
-                : //Color.fromARGB(255, 106, 162, 240),
-                Colors.black54,
+                : Colors.black54,
           ),
           child: SafeArea(
             child: Stack(
@@ -130,14 +127,6 @@ class _HomePageState extends State<HomePage> {
                             '$currTemp˚C', // 현재 온도
                             style: GoogleFonts.questrial(
                               color: Colors.white,
-                              //Color.fromARGB(31, 53, 50, 50),
-                              // currTemp <= 0
-                              //     ? Colors.blue
-                              //     : currTemp > 0 && currTemp <= 15
-                              //         ? Colors.indigo
-                              //         : currTemp > 15 && currTemp < 30
-                              //             ? Colors.deepPurple
-                              //             : Colors.pink,
                               fontSize: size.height * 0.12,
                             ),
                           ),
@@ -146,9 +135,6 @@ class _HomePageState extends State<HomePage> {
                       Padding(
                         padding:
                             EdgeInsets.symmetric(horizontal: size.width * 0.25),
-                        // child: Divider( // 선
-                        //   color: isDarkMode ? Colors.white : Colors.black,
-                        // ),
                       ),
                       Padding(
                         padding: EdgeInsets.only(
